@@ -1,0 +1,113 @@
+{
+    "employee":[
+        {
+            "id":111,
+            "name":"malvi",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },
+        {
+            "id":222,
+            "name":"sai prassana",
+            "project_name":"nokia",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello byee "
+
+        }
+        ,
+        {
+            "id":333,
+            "name":"mateen",
+            "project_name":"china phone",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello plz"
+
+        },{
+            "id":444,
+            "name":"siva",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":555,
+            "name":"sashi",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":666,
+            "name":"arvind",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":777,
+            "name":"shanti",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":888,
+            "name":"arun",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":999,
+            "name":"amit",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":1000,
+            "name":"malvi",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        },{
+            "id":111,
+            "name":"malvi",
+            "project_name":"oppo",
+            "date":"2022-05-25",
+            "time":"09:00",
+            "task":" hello"
+
+        }
+
+    ],
+    "project":[{
+        "pid":1,
+        "project_name":"oppo"
+    },
+    {
+    "pid":2,
+        "project_name":"nokia"
+    },
+    {
+        "pid":3,
+            "project_name":"china phone"
+        }
+
+]
+
+    
+}

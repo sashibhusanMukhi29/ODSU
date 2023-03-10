@@ -1,0 +1,13 @@
+table#table1 th{
+    padding-right: 40px;
+}
+table#table1 td{
+    text-align: left;
+}
+table#table1 thead{
+    text-align: center;
+}
+/* .pmo-heading{
+    position:fixed;
+    top: 0px;
+} */
