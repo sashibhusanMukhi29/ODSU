@@ -1,113 +1,78 @@
 {
-    "employee":[
-        {
-            "id":111,
-            "name":"malvi",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },
-        {
-            "id":222,
-            "name":"sai prassana",
-            "project_name":"nokia",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello byee "
-
-        }
-        ,
-        {
-            "id":333,
-            "name":"mateen",
-            "project_name":"china phone",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello plz"
-
-        },{
-            "id":444,
-            "name":"siva",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":555,
-            "name":"sashi",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":666,
-            "name":"arvind",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":777,
-            "name":"shanti",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":888,
-            "name":"arun",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":999,
-            "name":"amit",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":1000,
-            "name":"malvi",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        },{
-            "id":111,
-            "name":"malvi",
-            "project_name":"oppo",
-            "date":"2022-05-25",
-            "time":"09:00",
-            "task":" hello"
-
-        }
-
-    ],
-    "project":[{
-        "pid":1,
-        "project_name":"oppo"
+  "employee": [
+    {
+      "empName": "shiva",
+      "projectName": "Python",
+      "dsrDate": "2023-03-02",
+      "hrs": [
+        "4:10"
+      ],
+      "taskDescription": "123",
+      "id": 335
     },
     {
-    "pid":2,
-        "project_name":"nokia"
+      "empName": "mateen",
+      "projectName": "Java",
+      "dsrDate": "2023-03-03",
+      "hrs": [
+        "12:10"
+      ],
+      "taskDescription": "123123",
+      "id": 336
     },
     {
-        "pid":3,
-            "project_name":"china phone"
-        }
-
-]
-
-    
+      "empName": "sid",
+      "projectName": "Java",
+      "dsrDate": "2023-03-03",
+      "hrs": [
+        "04:10"
+      ],
+      "taskDescription": "123",
+      "id": 337
+    },
+    {
+      "empName": "kln",
+      "projectName": "Java",
+      "dsrDate": "2023-03-07",
+      "hrs": [
+        "12:10"
+      ],
+      "taskDescription": "hey kaly",
+      "id": 338
+    },
+    {
+      "empName": "sashi",
+      "projectName": "Java",
+      "dsrDate": "2023-03-01",
+      "hrs": [
+        "12:14"
+      ],
+      "taskDescription": "123",
+      "id": 339
+    },
+    {
+      "empName": "prasanna",
+      "projectName": "Java",
+      "dsrDate": "2023-03-03",
+      "hrs": [
+        "12:13"
+      ],
+      "taskDescription": "123",
+      "id": 340
+    }
+  ],
+  "project": [
+    {
+      "id": 1,
+      "project_name": "ReactJs"
+    },
+    {
+      "id": 2,
+      "project_name": "Java"
+    },
+    {
+      "id": 3,
+      "project_name": "Python"
+    }
+  ]
 }

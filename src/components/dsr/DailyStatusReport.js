@@ -38,16 +38,25 @@ function DailyStatusReport() {
   const indexofLastpage = currentpage * postsperpage;
   const indexofFirstPage = indexofLastpage - postsperpage;
   const [employee, setEmployee] = useState([])
+  const [project, setProject] = useState([])
   useEffect(() => {
     getEmployee();
+    getProjects();
   }, []
   )
-  const getEmployee = async () => {
-    const result = await axios.get("http://localhost:3002/employee").then(res => setEmployee(res.data))
+  const getEmployee =  () => {
+    const result =  axios.get("http://localhost:3001/employee").then(res => setEmployee(res.data))
+
+    
     // setEmployee(result.data)
   }
 
+  const getProjects =  () => {
+    const result =  axios.get("http://localhost:3001/project").then(res => setProject(res.data))
 
+    
+    // setEmployee(result.data)
+  }
 
   const handleClose = () => setShow(false);
   const prevhandle = () => {
@@ -83,7 +92,8 @@ function DailyStatusReport() {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log(empName, projectName, dsrDate, hrs, taskDescription);
     if (
       empName.length > 0 &&
@@ -101,14 +111,15 @@ function DailyStatusReport() {
         taskDescription: taskDescription,
       };
       console.log(obj);
-      axios.post(`${api}dailystatus/addDSR`, obj).then((resp) => {
+      axios.post("http://localhost:3001/employee", obj).then((resp) => {
         if (resp.status == 200) {
           console.log(resp.data[0].msg, "iam 77 line");
           setMessage(resp.data[0].msg);
         }
+       
         setInfo(resp.data);
 
-        axios.get(`${api}dailystatus/fetchdsr`).then((resp) => {
+        axios.get("http://localhost:3001/employee").then((resp) => {
           setInfo(resp.data);
 
         });
@@ -233,8 +244,10 @@ function DailyStatusReport() {
                     required
                     autoComplete="off"
                     value={empName}
+
                     style={
                       submitcount == 1 && empName.length == 0
+                      
                         ? { border: "solid red 1px" }
                         : null
                     }
@@ -257,10 +270,12 @@ function DailyStatusReport() {
                     }
                     onChange={(e) => setProjectName(e.target.value)}
                   >
-                    <option>Select Project</option>
-                    {projectNamesget.map((e) => (
-                      <option value={e}>{e}</option>
-                    ))}
+                   {
+                    project &&
+                    project.map((value)=>
+                    <option>{value.project_name}</option>)
+                   }
+                   
                   </select>
                 </div>
               </div>
@@ -270,7 +285,7 @@ function DailyStatusReport() {
                     <button
                       className="btn btn-primary"
                       type="button"
-                      onClick={handleSubmit}
+                      onClick={(e)=>{handleSubmit(e)}}
                     >
                       Submit
                     </button>
@@ -302,7 +317,7 @@ function DailyStatusReport() {
                 <div className="mb-2">
                   <label className="form-label">Hours Worked</label>
                   <input
-                    type="/^[A-Za-z\s]*$/"
+                    type="/^[a-zA-Z\s]*$/"
                     className="form-control"
                     placeholder="eg:04:10"
                     required
@@ -332,7 +347,7 @@ function DailyStatusReport() {
                   >
                     <div>
                       <div>
-                        <div ref={quillRef} />
+                      <div ref={quillRef} />
                       </div>
                     </div>
                   </div>
@@ -422,11 +437,10 @@ function DailyStatusReport() {
                             {
                               employee.map((e, i) =>
                                 <tr key={i}>
-
-                                  <th>{e.name}</th>
-                                  <th >{e.project_name}</th>
-                                  <th >{e.time}</th>
-                                  <th >{e.task}</th>
+                                  <th>{e.empName}</th>
+                                  <th >{e.projectName}</th>
+                                  <th >{e.hrs}</th>
+                                  <th >{e.taskDescription}</th>
                                 </tr>
 
                               )

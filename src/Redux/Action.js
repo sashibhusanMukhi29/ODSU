@@ -6,7 +6,7 @@ const initialState = {
   title:'',
  
   //api:"http://192.168.3.156:8888/"
-  api:"http://localhost:3002/rrfData/"
+  api:"http://localhost:3001/employee"
 };
 
 const Resource = createSlice({
